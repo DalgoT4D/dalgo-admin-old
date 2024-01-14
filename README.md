@@ -75,7 +75,7 @@ GRANT ALL PRIVILEGES ON DATABASE dalgo_db TO dalgo_user;
 ```
 
 ### return to django project
-1. create a .env file and add it to .gitignore in root directory
+1. create a .env file in root directory
 2. Inside the .env file add the environment variables for the database with values you created above (check the .env.template for variables)
 3. Now apply the database settings to your django app
 ```bash
