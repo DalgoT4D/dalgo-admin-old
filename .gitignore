@@ -1,0 +1,4 @@
+.env 
+dalgoenv/
+__pycache__/
+*.pyc
