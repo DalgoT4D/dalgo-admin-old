@@ -30,28 +30,11 @@ git clone <repository_url>
 ```bash
 cd .\dalgo-admin
 ```
-3. Now create the virtual environment.
+
+4. Run virtual environment, install the required packages.
 
 ```bash
-python -m venv dalgoenv
-```
-
-run it by any of the given commands:
-- Windows
-
-```bash
-.\dalgoenv\Scripts\activate
-```
-- Linux/MacOS
-
-```bash
-source dalgoenv\Scripts\activate
-```
-
-4. Once the virtual environment is activated, install the required packages using pip
-
-```bash
-pip install requirements.txt
+   pip install -r requirements.txt
 ```
 5. now change directory to the dalgo_admin
 
