@@ -66,6 +66,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'dalgo_admin.wsgi.application'
 
+# Authentication 
 
 SOCIALACCOUNT_PROVIDERS = {
 
@@ -94,7 +95,7 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = 'optional'
 LOGIN_REDIRECT_URL = 'home'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
-
+ACCOUNT_ADAPTER = 'dalgo_admin_app.account_adapter.MyAccountAdapter'
 
 # fetching database values from env file
 DATABASES = {
