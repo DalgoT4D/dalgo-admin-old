@@ -1,0 +1,33 @@
+<!-- templates/client_details.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Client Details</title>
+</head>
+<body>
+    <h1>Client Details</h1>
+    
+    {% for client in clients %}
+        <h> {{client}}</h>
+        <p>Slug: {{ client.slug }}</p>
+        <p>Warehouse Type: {{ client.warehouse_type }}</p>
+
+        <h3>Data Sources:</h3>
+        <ul>
+            {% for data_source in client.data_sources.all %}
+                <li>{{ data_source.type }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>Pipelines:</h3>
+        <ul>
+            {% for pipeline in client.pipelines.all %}
+                <li>{{ pipeline }}</li>
+            {% endfor %}
+        </ul>
+
+        <p>GitHub Repo: {% if client.github_repo_url %}<a href="{{ client.github_repo_url }}" target="_blank">{{ client.github_repo_url }}</a>{% else %}No GitHub Repo{% endif %}</p>
+        <hr> 
+    {% endfor %}
+</body>
+</html>

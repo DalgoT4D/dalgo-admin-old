@@ -3,25 +3,13 @@ from django.db import models
 # Create your models here.
 
 class DataSource(models.Model):
-    TYPE_CHOICES = [
-        ('KoboToolbox', 'KoboToolbox'),
-        ('MySQL', 'MySQL'),
-        ('Salesforce', 'Salesforce')
-    ]
-    STATUS_CHOICES = [
-        ('Success','Success'),
-        ('Failed','Failed')
-    ]
-    type = models.CharField(max_length=20, choices=TYPE_CHOICES)
+    type = models.TextField()
     number_of_streams = models.PositiveIntegerField()
-    last_sync_date = models.DateTimeField()
-    last_sync_status = models.CharField(max_length=10, choices = STATUS_CHOICES) #Success / failed 
+    last_sync_date = models.DateTimeField(null=False)
+    last_sync_status = models.TextField()
+    
 
 class PipelineConfig(models.Model):
-    ACTIVE_CHOICES = [
-        ('Yes', 'Yes'),
-        ('No', 'No'),
-    ]
 
     SCHEDULE_CHOICES = [
         ('Manual', 'Manual'),
@@ -29,7 +17,7 @@ class PipelineConfig(models.Model):
         ('Weekly', 'Weekly'),
     ]
 
-    active = models.CharField(max_length=3, choices=ACTIVE_CHOICES, default='No')
+    active = models.BooleanField(default=False)
     schedule = models.CharField(max_length=7, choices=SCHEDULE_CHOICES, default='Manual')
     time = models.TimeField(null=True, blank=True)
 
@@ -40,8 +28,8 @@ class Client(models.Model):
     slug = models.SlugField(unique = True)
     full_name = models.CharField(max_length=255)
     warehouse_type = models.CharField(max_length=50)
-    data_sources = models.ManyToManyField(DataSource)
-    pipelines = models.ManyToManyField(PipelineConfig)
+    data_sources = models.ForeignKey(DataSource,on_delete= models.CASCADE)
+    pipelines = models.ForeignKey(PipelineConfig,on_delete= models.CASCADE)
     github_repo_url = models.URLField(blank=True, null=True)
     
 
