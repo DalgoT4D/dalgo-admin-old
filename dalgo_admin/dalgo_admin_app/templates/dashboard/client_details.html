@@ -1,33 +1,47 @@
-<!-- templates/client_details.html -->
+<!-- client_details.html -->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client Details</title>
 </head>
 <body>
+
     <h1>Client Details</h1>
-    
+
     {% for client in clients %}
-        <h> {{client}}</h>
-        <p>Slug: {{ client.slug }}</p>
-        <p>Warehouse Type: {{ client.warehouse_type }}</p>
+        <h2>{{ client.full_name }}</h2>
+        <p><strong>Slug:</strong> {{ client.slug }}</p>
+        <p><strong>Warehouse Type:</strong> {{ client.warehouse_type }}</p>
+        <p><strong>GitHub Repo URL:</strong> {{ client.github_repo_url }}</p>
 
-        <h3>Data Sources:</h3>
+        <h3>Data Sources</h3>
         <ul>
-            {% for data_source in client.data_sources.all %}
-                <li>{{ data_source.type }}</li>
+            {% for datasource in client.datasource.all %}
+                <li>
+                    <strong>Type:</strong> {{ datasource.type }}<br>
+                    <strong>Number of Streams:</strong> {{ datasource.number_of_streams }}<br>
+                    <strong>Last Sync Date:</strong> {{ datasource.last_sync_date }}<br>
+                    <strong>Last Sync Status:</strong> {{ datasource.last_sync_status }}
+                </li>
             {% endfor %}
         </ul>
 
-        <h3>Pipelines:</h3>
+        <h3>Pipeline Configurations</h3>
         <ul>
-            {% for pipeline in client.pipelines.all %}
-                <li>{{ pipeline }}</li>
+            {% for pipelineconfig in client.pipelineconfig.all %}
+                <li>
+                    <strong>Active:</strong> {{ pipelineconfig.active }}<br>
+                    <strong>Schedule:</strong> {{ pipelineconfig.get_schedule_display }}<br>
+                    <strong>Time:</strong> {{ pipelineconfig.time }}
+                </li>
             {% endfor %}
         </ul>
 
-        <p>GitHub Repo: {% if client.github_repo_url %}<a href="{{ client.github_repo_url }}" target="_blank">{{ client.github_repo_url }}</a>{% else %}No GitHub Repo{% endif %}</p>
-        <hr> 
+        <hr>
     {% endfor %}
+
 </body>
 </html>
