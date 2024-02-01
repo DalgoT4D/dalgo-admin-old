@@ -4,6 +4,14 @@ from .models import Client
 
 # Create your views here.
 
-def get_client(request):
+def get_clients(request):
      clients = Client.objects.prefetch_related('pipelineconfig','datasource').all()
-     return render(request, 'dashboard/client_details.html', {'clients': clients})
+     return render(request, 'dashboard/clients_details.html', {'clients': clients})
+
+def get_client_detail(request,client_id):
+     try:
+        client = Client.objects.get(id=client_id)
+        context = {'client': client}
+        return render(request, 'dashboard/client.html', context)
+     except Client.DoesNotExist:
+        return HttpResponse("Client not found", status=404)
