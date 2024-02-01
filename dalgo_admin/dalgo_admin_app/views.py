@@ -5,7 +5,7 @@ from .models import Client
 # Create your views here.
 
 def get_clients(request):
-     clients = Client.objects.prefetch_related('pipelineconfig','datasource').all()
+     clients = Client.objects.all()
      return render(request, 'dashboard/clients_details.html', {'clients': clients})
 
 def get_client_detail(request,client_id):
