@@ -1,0 +1,22 @@
+[
+    {
+        "pk": "1",
+        "model": "dalgo_admin_app.client",
+        "fields": {
+            "full_name": "Roxi Sidgwick",
+            "warehouse_type": "Passat",
+            "github_repo_url": "https://shareasale.com/luctus/et/ultrices.xml",
+            "slug": "rsidgwick0"
+        }
+    },
+    {
+        "pk": "2",
+        "model": "dalgo_admin_app.client",
+        "fields": {
+            "full_name": "Eddi Spiring",
+            "warehouse_type": "Stratus",
+            "github_repo_url": "https://narod.ru/nulla.html",
+            "slug": "espiring1"
+        }
+    }
+]
