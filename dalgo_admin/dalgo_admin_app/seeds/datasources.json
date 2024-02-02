@@ -1,0 +1,1102 @@
+[
+    {
+        "pk": "1",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-05-25",
+            "last_sync_status": "1:42",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "2",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "60",
+            "last_sync_date": "2023-06-15",
+            "last_sync_status": "2:16",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "3",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "71",
+            "last_sync_date": "2023-08-19",
+            "last_sync_status": "8:28",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "4",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "9",
+            "last_sync_date": "2023-09-25",
+            "last_sync_status": "0:25",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "5",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "523",
+            "last_sync_date": "2023-09-15",
+            "last_sync_status": "0:38",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "6",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-04-26",
+            "last_sync_status": "5:53",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "7",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "41",
+            "last_sync_date": "2023-06-20",
+            "last_sync_status": "23:58",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "8",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "8",
+            "last_sync_date": "2023-04-26",
+            "last_sync_status": "10:04",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "9",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "496",
+            "last_sync_date": "2023-12-09",
+            "last_sync_status": "6:57",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "10",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "86",
+            "last_sync_date": "2023-12-15",
+            "last_sync_status": "12:16",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "11",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "710",
+            "last_sync_date": "2023-12-27",
+            "last_sync_status": "8:58",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "12",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "7",
+            "last_sync_date": "2023-03-12",
+            "last_sync_status": "3:40",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "13",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "7",
+            "last_sync_date": "2023-12-12",
+            "last_sync_status": "7:52",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "14",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "98",
+            "last_sync_date": "2023-11-04",
+            "last_sync_status": "11:41",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "15",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "58",
+            "last_sync_date": "2023-11-20",
+            "last_sync_status": "6:47",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "16",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-03-02",
+            "last_sync_status": "8:34",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "17",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-10-21",
+            "last_sync_status": "22:06",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "18",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "1",
+            "last_sync_date": "2023-04-29",
+            "last_sync_status": "23:30",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "19",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "50",
+            "last_sync_date": "2023-05-12",
+            "last_sync_status": "14:41",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "20",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-08-22",
+            "last_sync_status": "0:33",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "21",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-12-19",
+            "last_sync_status": "13:15",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "22",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-04-19",
+            "last_sync_status": "22:06",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "23",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "299",
+            "last_sync_date": "2023-07-13",
+            "last_sync_status": "5:32",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "24",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "99",
+            "last_sync_date": "2023-09-10",
+            "last_sync_status": "4:29",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "25",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-05-08",
+            "last_sync_status": "17:50",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "26",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-05-02",
+            "last_sync_status": "8:20",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "27",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-03-12",
+            "last_sync_status": "4:13",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "28",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "743",
+            "last_sync_date": "2023-10-23",
+            "last_sync_status": "11:15",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "29",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2024-01-22",
+            "last_sync_status": "18:46",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "30",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "38",
+            "last_sync_date": "2023-02-23",
+            "last_sync_status": "23:31",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "31",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "3",
+            "last_sync_date": "2023-07-05",
+            "last_sync_status": "2:17",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "32",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-02-24",
+            "last_sync_status": "15:23",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "33",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "9",
+            "last_sync_date": "2023-12-16",
+            "last_sync_status": "18:54",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "34",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "7",
+            "last_sync_date": "2024-01-01",
+            "last_sync_status": "22:23",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "35",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-08-29",
+            "last_sync_status": "3:52",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "36",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "14",
+            "last_sync_date": "2023-10-28",
+            "last_sync_status": "18:02",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "37",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "190",
+            "last_sync_date": "2023-08-05",
+            "last_sync_status": "13:22",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "38",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "88",
+            "last_sync_date": "2023-03-14",
+            "last_sync_status": "2:48",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "39",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "11",
+            "last_sync_date": "2023-12-10",
+            "last_sync_status": "9:48",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "40",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-12-28",
+            "last_sync_status": "0:20",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "41",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-05-29",
+            "last_sync_status": "22:42",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "42",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-08-14",
+            "last_sync_status": "10:42",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "43",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "1000",
+            "last_sync_date": "2024-01-22",
+            "last_sync_status": "19:15",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "44",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-08-08",
+            "last_sync_status": "15:55",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "45",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "496",
+            "last_sync_date": "2023-07-31",
+            "last_sync_status": "19:16",
+            "client_id": "1"
+        }
+    },
+    {
+        "pk": "46",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-08-02",
+            "last_sync_status": "12:53",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "47",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-06-28",
+            "last_sync_status": "2:47",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "48",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "20",
+            "last_sync_date": "2023-02-20",
+            "last_sync_status": "3:00",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "49",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "832",
+            "last_sync_date": "2024-01-07",
+            "last_sync_status": "8:36",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "50",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-12-29",
+            "last_sync_status": "23:32",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "51",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "6",
+            "last_sync_date": "2023-10-24",
+            "last_sync_status": "13:30",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "52",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-03-15",
+            "last_sync_status": "5:36",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "53",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-08-05",
+            "last_sync_status": "15:17",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "54",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-04-28",
+            "last_sync_status": "12:49",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "55",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "230",
+            "last_sync_date": "2023-10-16",
+            "last_sync_status": "1:56",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "56",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-04-14",
+            "last_sync_status": "5:21",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "57",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-12-23",
+            "last_sync_status": "6:12",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "58",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "37",
+            "last_sync_date": "2023-05-15",
+            "last_sync_status": "0:27",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "59",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "217",
+            "last_sync_date": "2023-11-04",
+            "last_sync_status": "8:57",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "60",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-04-24",
+            "last_sync_status": "16:32",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "61",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-08-19",
+            "last_sync_status": "7:04",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "62",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-05-06",
+            "last_sync_status": "20:31",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "63",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-04-08",
+            "last_sync_status": "5:07",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "64",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-04-11",
+            "last_sync_status": "11:51",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "65",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "8",
+            "last_sync_date": "2023-05-29",
+            "last_sync_status": "4:20",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "66",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-07-25",
+            "last_sync_status": "5:32",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "67",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-05-07",
+            "last_sync_status": "20:35",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "68",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "49",
+            "last_sync_date": "2023-08-04",
+            "last_sync_status": "11:58",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "69",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-04-21",
+            "last_sync_status": "16:42",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "70",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "387",
+            "last_sync_date": "2023-07-27",
+            "last_sync_status": "4:37",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "71",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "20",
+            "last_sync_date": "2023-12-07",
+            "last_sync_status": "7:39",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "72",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "98",
+            "last_sync_date": "2023-06-05",
+            "last_sync_status": "14:02",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "73",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-11-25",
+            "last_sync_status": "18:10",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "74",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "706",
+            "last_sync_date": "2023-06-21",
+            "last_sync_status": "21:24",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "75",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "34",
+            "last_sync_date": "2023-12-15",
+            "last_sync_status": "13:25",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "76",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-04-28",
+            "last_sync_status": "7:35",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "77",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-03-21",
+            "last_sync_status": "22:54",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "78",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-03-09",
+            "last_sync_status": "21:23",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "79",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-05-22",
+            "last_sync_status": "7:49",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "80",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "3",
+            "last_sync_date": "2023-11-23",
+            "last_sync_status": "17:31",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "81",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "58",
+            "last_sync_date": "2023-05-11",
+            "last_sync_status": "20:36",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "82",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "2",
+            "last_sync_date": "2023-04-16",
+            "last_sync_status": "5:09",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "83",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "464",
+            "last_sync_date": "2023-08-07",
+            "last_sync_status": "1:53",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "84",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-07-25",
+            "last_sync_status": "0:42",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "85",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "76",
+            "last_sync_date": "2023-10-09",
+            "last_sync_status": "6:42",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "86",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "575",
+            "last_sync_date": "2023-11-28",
+            "last_sync_status": "8:42",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "87",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "65",
+            "last_sync_date": "2023-06-26",
+            "last_sync_status": "8:44",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "88",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "6",
+            "last_sync_date": "2023-10-27",
+            "last_sync_status": "23:36",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "89",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2024-01-16",
+            "last_sync_status": "12:31",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "90",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-08-21",
+            "last_sync_status": "20:53",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "91",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "6",
+            "last_sync_date": "2024-01-16",
+            "last_sync_status": "0:50",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "92",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "49",
+            "last_sync_date": "2023-05-09",
+            "last_sync_status": "4:37",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "93",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-06-10",
+            "last_sync_status": "16:25",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "94",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-02-17",
+            "last_sync_status": "16:46",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "95",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "14",
+            "last_sync_date": "2023-07-20",
+            "last_sync_status": "18:44",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "96",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "KoboToolbox",
+            "number_of_streams": "9",
+            "last_sync_date": "2024-01-04",
+            "last_sync_status": "12:31",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "97",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "1000",
+            "last_sync_date": "2024-01-04",
+            "last_sync_status": "5:13",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "98",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "MySQL",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-07-21",
+            "last_sync_status": "10:13",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "99",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2024-01-01",
+            "last_sync_status": "23:17",
+            "client_id": "2"
+        }
+    },
+    {
+        "pk": "100",
+        "model": "dalgo_admin_app.datasource",
+        "fields": {
+            "type": "Salesforce",
+            "number_of_streams": "1000",
+            "last_sync_date": "2023-03-09",
+            "last_sync_status": "5:46",
+            "client_id": "2"
+        }
+    }
+]
