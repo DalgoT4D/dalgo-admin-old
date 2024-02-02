@@ -4,5 +4,4 @@ __pycache__/
 *.pyc
 Pipfile
 Pipfile.lock
-**/migrations/*.py
 **/migrations/*.pyc
