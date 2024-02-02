@@ -1,0 +1,16 @@
+{
+    "Airbyte":{
+        "version":"0.50.12"
+    },
+    "Prefect":{
+        "version":"0.22.1"
+    },
+    "dbt":{
+        "version":"1.1.32"
+    },
+    "Machine_metrics":{
+        "CPU_usage_percent": 25,
+        "available_RAM_GB": 8,
+        "available_disk_space_GB": 250
+    }
+}

@@ -74,6 +74,10 @@ GRANT ALL PRIVILEGES ON DATABASE dalgo_db TO dalgo_user;
 python manage.py makemigrations
 python manage.py migrate
 ```
+4. get your django secret-key value by following command and paste in .env file
+```bash
+python manage.py shell -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+```
 4. run the server
 ```bash
 py manage.py runserver
