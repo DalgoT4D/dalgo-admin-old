@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    margin-bottom: 0;
+    font-family:'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+.head-title{
+    text-align: center;
+    padding:16px 32px;
+}
+
+
+
+.container{
+    padding: 2% 5%;
+}
+
+.title-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.4rem;
+}
+
+.logo{
+    width: 10%;
+}
+
+.prefect-logo{
+    width: 6%;
+}
+
+.card{
+    margin-bottom: 16px;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
