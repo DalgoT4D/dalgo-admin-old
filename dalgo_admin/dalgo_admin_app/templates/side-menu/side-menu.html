@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Side Menu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #333;
+      padding: 20px;
+      transition: left 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    .side-menu.open {
+      left: 0;
+    }
+
+    @media (min-width: 768px) {
+      .side-menu {
+        left: 0; 
+      }
+
+      .btn-dark {
+        display: none; 
+      }
+    }
+
+    .btn-close {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .list-unstyled {
+      padding: 0;
+      list-style: none;
+    }
+
+    .list-unstyled li {
+      margin-bottom: 15px;
+    }
+
+    .list-unstyled li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    .list-unstyled li a:hover {
+      color: #ffc107; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="side-menu">
+    <button class="btn-close d-block d-lg-none" aria-label="Close" onclick="toggleSideMenu()">✖</button>
+    <ul class="list-unstyled">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li role="separator" class="dropdown-divider"></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <button class="btn btn-dark d-lg-none" onclick="toggleSideMenu()">☰</button>
+
+  <div class="container mt-5">
+    <h1>Main Content</h1>
+    <p>Your main content here.</p>
+  </div>
+
+  <script>
+    function toggleSideMenu() {
+      const sideMenu = document.querySelector('.side-menu');
+      sideMenu.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
