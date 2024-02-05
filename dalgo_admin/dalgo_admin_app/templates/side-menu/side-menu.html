@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Side Menu</title>
+  <title>Adding Side Menu</title>
   <style>
     body {
       margin: 0;
@@ -21,6 +21,7 @@
       transition: left 0.3s ease;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       z-index: 1000;
+      display: none; 
     }
 
     .side-menu.open {
@@ -29,11 +30,11 @@
 
     @media (min-width: 768px) {
       .side-menu {
-        left: 0; 
+        left: 0;
       }
 
       .btn-dark {
-        display: none; 
+        display: none;
       }
     }
 
@@ -64,7 +65,32 @@
     }
 
     .list-unstyled li a:hover {
-      color: #ffc107; 
+      color: #ffc107;
+    }
+
+    .main-content {
+      margin-left: 0; 
+      transition: margin-left 0.3s ease;
+      width: 100%;
+      box-sizing: border-box;
+      
+      padding: 20px; 
+      position:center;
+    }
+
+    .menu-icon {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #fff;
+      z-index: 1001;
+      display: none; 
+    }
+
+    .menu-icon.show {
+      display: block;
     }
   </style>
 </head>
@@ -81,17 +107,56 @@
     </ul>
   </div>
 
-  <button class="btn btn-dark d-lg-none" onclick="toggleSideMenu()">☰</button>
+  <button class="btn btn-dark d-lg-none menu-icon" onclick="toggleSideMenu()">☰</button>
 
-  <div class="container mt-5">
-    <h1>Main Content</h1>
-    <p>Your main content here</p>
+  <div class="container mt-5 main-content">
+    <h1>Home Page</h1>
+    <p>Home Content</p>
   </div>
 
   <script>
+    
+    const userIsLoggedIn = true; 
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const sideMenu = document.querySelector('.side-menu');
+      const mainContent = document.querySelector('.main-content');
+      const closeBtn = document.querySelector('.btn-close');
+      const menuIcon = document.querySelector('.menu-icon');
+
+      if (userIsLoggedIn) {
+        sideMenu.style.display = 'block';
+        mainContent.style.marginLeft = '250px'; 
+      } else {
+        sideMenu.style.display = 'none';
+        mainContent.style.marginLeft = '0';
+        menuIcon.classList.add('show'); 
+      }
+
+      closeBtn.addEventListener('click', function() {
+        sideMenu.style.display = 'none';
+        mainContent.style.marginLeft = '0';
+        menuIcon.classList.add('show'); 
+      });
+
+      menuIcon.addEventListener('click', function() {
+        sideMenu.style.display = 'block';
+        mainContent.style.marginLeft = '250px';
+        menuIcon.classList.remove('show'); 
+      });
+    });
+
     function toggleSideMenu() {
       const sideMenu = document.querySelector('.side-menu');
+      const mainContent = document.querySelector('.main-content');
       sideMenu.classList.toggle('open');
+
+      
+      if (sideMenu.classList.contains('open')) {
+        mainContent.style.marginLeft = '250px';
+      } else {
+        mainContent.style.marginLeft = '0';
+      }
     }
   </script>
 
