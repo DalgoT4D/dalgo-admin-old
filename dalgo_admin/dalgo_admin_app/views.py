@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf import settings
 from .models import Client
-
+# from django.contrib.auth.decorators import login_required
 
 def get_clients(request):
     clients = Client.objects.all()
@@ -50,3 +50,4 @@ def read_file(file_path):
             available_disk_space_gb,
         ]
         return final_data
+
