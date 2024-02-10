@@ -3,7 +3,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf import settings
 from .models import Client
-# from django.contrib.auth.decorators import login_required
 
 def get_clients(request):
     clients = Client.objects.all()
