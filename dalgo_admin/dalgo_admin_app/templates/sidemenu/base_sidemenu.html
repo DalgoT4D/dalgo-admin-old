@@ -1,23 +1,17 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  -->
-    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <title>Dalgo Admin</title>
 
-    <style>
-        .item{
-            padding: 20px;;
-        }
-        a:link { 
-  text-decoration: none; 
-}
-    </style>
+   
 </head>
 <body>
     
@@ -34,7 +28,7 @@
               </button>
                 <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
                   <div class="offcanvas-header">
-                    <h5 class="offcanvas-title fw-bold text-center" id="staticBackdropLabel">SIDE MENU</h5>
+                    <h5 class="offcanvas-title fw-bold text-center" id="staticBackdropLabel">DALGO ADMIN</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                 <div class="offcanvas-body">
@@ -50,36 +44,23 @@
                       <div class="item">
                         <div class="sub-btn">
                           
-                          <a href="http://"><span>Home</span></a>
-                          </div>
+                          <a href="/"><span>Home</span></a>
+                        </div>
                        
                       </div>
   
                       <div class="item">
                         <div class="sub-btn">
-                          <a href="http://"><span>About</span></a>
+                          <a href="{%url 'clients_details'%}"><span>Client Details</span></a>
                         </div>
                       </div>
   
                       <div class="item">
                           <div class="sub-btn">
-                              <a href="http://"><span>Services</span></a>
+                              <a href="{%url 'infra_info'%}"><span>Dalgo Infrastructure Overview</span></a>
                           </div>
                       </div>
   
-                      <div class="item">
-                          <div class="sub-btn">
-                              <a href="http://"><span>Contact</span></a>
-                          </div>
-                      </div>
-  
-                      <div class="item">
-                          <div class="sub-btn">
-                            <a href="http://"><span>Settings</span></a>
-                          </div>
-                      </div>
-                      
-                   
                     </div>
                   </div>
                 </div>

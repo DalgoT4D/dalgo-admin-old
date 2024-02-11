@@ -1,3 +1,10 @@
+.item{
+    padding: 30px;;
+}
+a:link { 
+text-decoration: none; 
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -42,3 +49,4 @@ p{
     padding: 0;
     margin: 0;
 }
+
