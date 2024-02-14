@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    margin-bottom: 0;
+    font-family:'Segoe UI', Arial, Helvetica, sans-serif;
+    background: linear-gradient(-45deg, #23a6d5, #23d5ab, #23CBB5);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #fff;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Toolbar CSS  */
+.navbar{
+    box-shadow:  0px 8px 16px rgba(0,0,0,.6);
+}
+.navbar-brand{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.btn{
+    background-color: #23CBB5;
+    color: white;
+    border: 1px solid #23d5ab;
+}
+/* Toolbar CSS ends here  */
+
+/* Infrastructure Page CSS  */
+.head-title{
+    text-align: center;
+}
+
+.container{
+    padding: 2% 5%;
+}
+
+.title-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.4rem;
+}
+
+.logo{
+    width: 10%;
+}
+
+.prefect-logo{
+    width: 6%;
+}
+
+.card{
+    margin-bottom: 16px;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
+/* Infrastrucutre CSS ends here  */
+
+/* Media Queries  */
+@media (max-width: 576px) {
+    .navbar{
+        /* padding: 0 */
+        margin-bottom: 10px;
+    }
+    .navbar-nav {
+        flex-direction: row !important; /* Ensures items are aligned horizontally */
+    }
+
+    .navbar-brand {
+        /* margin: auto !important; */
+        font-size: 1rem;
+        margin-right: 3px;
+    }
+}

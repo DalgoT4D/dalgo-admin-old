@@ -1,6 +1,11 @@
+
 {% extends "sidemenu/base_sidemenu.html" %}
 {% load static%}
-  
+{% extends '../base.html' %}
+
+
+  {% load static%}
+  {% block title %}Dalgo-Infrastructure{% endblock %}
   {% block content%}
   <h1 class="head-title">Dalgo Infrastructure Overview</h1>
   {% if data != "error"%}
@@ -63,4 +68,5 @@
       <h4>data receiving error </h4>
     </div>
   {% endif %}
+  {% endblock %}
   {% endblock %}

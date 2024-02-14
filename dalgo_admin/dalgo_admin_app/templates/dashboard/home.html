@@ -1,5 +1,9 @@
+
 {% extends "sidemenu/base_sidemenu.html" %}
   {% block content %}
+{% extends '../base.html' %}
+{% block title %}Home{% endblock %}
+{% block content%}
   <div class="container-fluid">
     <h1>Welcome {{ user }}!</h1>
     <p>Your Username : {{ user }}</p>
@@ -12,3 +16,4 @@
   </div>
   {% endblock content %}
 
+{% endblock %}
