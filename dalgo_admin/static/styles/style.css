@@ -1,3 +1,13 @@
+/* sidemenu css */
+.item{
+    padding: 30px;;
+}
+a:link { 
+text-decoration: none; 
+}
+/* sidemenu css ends here */
+
+
 *{
     padding: 0;
     margin: 0;
@@ -33,8 +43,11 @@ html,body {
 .navbar-brand{
     font-size: 1.5rem;
     font-weight: 700;
+    margin-left: -20px;
 }
-
+.navbar-nav{
+    margin-right:50%;
+}
 .btn{
     background-color: #23CBB5;
     color: white;

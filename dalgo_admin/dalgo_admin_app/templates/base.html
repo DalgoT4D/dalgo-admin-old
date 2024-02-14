@@ -1,22 +1,38 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../static/styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
     <link rel="shortcut icon" href="../../static/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
+
     <header class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand nav-logo" href="/">
-                <img src="../../static/Logo.svg" alt="Dalgo Logo">
+          {% if user.is_authenticated %}
+          <div class="sidemenu">
+            <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                  
+              <svg xmlns="http://www.w3.org/2000/svg" height="1.25em"viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </button>
+          </div>
+          {% endif %}
+ 
+            <a class="navbar-brand nav-logo " href="/">
+                <img src="{% static 'Logo.svg' %}" alt="Dalgo Logo">
             </a>
-            <div class="navbar-nav">
-                <span class="navbar-brand mx-auto">Dalgo Admin Console</span>
+           
+            <div class="navbar-nav mx-auto">
+              <span class="navbar-brand " >Dalgo Admin Console</span>
+    
             </div>
             <div class="dropdown">
                 <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
@@ -33,11 +49,61 @@
         </div>
     </header>
 
+
+    {% if user.is_authenticated %}
+   
+            <div class="p-2 bd-highlight">
+                <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title fw-bold text-center" id="staticBackdropLabel">DALGO ADMIN</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                <div class="offcanvas-body">
+                  <div>
+                    <div class="input-group rounded">
+                      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                      <span class="input-group-text border-0" id="search-addon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 
+                          0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                      </span>
+                    </div>
+                    <div class="menu">
+                      <div class="item">
+                        <div class="sub-btn">
+                          
+                          <a href="/"><span>Home</span></a>
+                        </div>
+                       
+                      </div>
+  
+                      <div class="item">
+                        <div class="sub-btn">
+                          <a href="{%url 'clients_details'%}"><span>Client Details</span></a>
+                        </div>
+                      </div>
+  
+                      <div class="item">
+                          <div class="sub-btn">
+                              <a href="{%url 'infra_info'%}"><span>Dalgo Infrastructure Overview</span></a>
+                          </div>
+                      </div>
+  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+    {% endif %}
+
+
     <!-- Your page content goes here -->
     <div class="container">
         {% block content %}
         {% endblock %}
     </div>
+    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function redirectToClient(clientId) {
