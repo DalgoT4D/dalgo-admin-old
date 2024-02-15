@@ -17,35 +17,40 @@
 
     <header class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          {% if user.is_authenticated %}
-          <div class="sidemenu">
-            <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
-                  
-              <svg xmlns="http://www.w3.org/2000/svg" height="1.25em"viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-            </button>
+          <div class="d-flex flex-row bd-highlight">
+            {% if user.is_authenticated %}
+            <div class="p-2 bd-highlight">
+              <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"> 
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+              </button>
+            </div>
+            {% endif %}
+            <div class="p-2 bd-highlight">
+              <a class="navbar-brand nav-logo" href="/">
+                <img src="{% static 'Logo.svg' %}" alt="Dalgo Logo" class="img-responsive">
+              </a>
+            </div>
           </div>
-          {% endif %}
- 
-            <a class="navbar-brand nav-logo " href="/">
-                <img src="{% static 'Logo.svg' %}" alt="Dalgo Logo">
-            </a>
-           
-            <div class="navbar-nav mx-auto">
-              <span class="navbar-brand " >Dalgo Admin Console</span>
     
-            </div>
-            <div class="dropdown">
-                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    Menu
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    {% if user.is_authenticated %}
-                        <li><a class="dropdown-item" href="{%url 'account_logout'%}">Logout</a></li>
-                    {% else %}
-                        <li><a class="dropdown-item" href="{%url 'account_login'%}">Login</a></li>
-                    {% endif %}
-                </ul>
-            </div>
+          <div class="collapse navbar-collapse">
+
+              <div class="navbar-nav mx-auto">
+                <span class="navbar-brand" >Dalgo Admin Console</span>
+              </div>
+
+              <div class="dropdown">
+                  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                      Menu
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      {% if user.is_authenticated %}
+                          <li><a class="dropdown-item" href="{%url 'account_logout'%}">Logout</a></li>
+                      {% else %}
+                          <li><a class="dropdown-item" href="{%url 'account_login'%}">Login</a></li>
+                      {% endif %}
+                  </ul>
+              </div>
+          </div>
         </div>
     </header>
 
@@ -68,12 +73,11 @@
                       </span>
                     </div>
                     <div class="menu">
+
                       <div class="item">
                         <div class="sub-btn">
-                          
                           <a href="/"><span>Home</span></a>
                         </div>
-                       
                       </div>
   
                       <div class="item">
