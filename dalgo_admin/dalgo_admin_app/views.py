@@ -4,7 +4,6 @@ from django.http import HttpResponse
 from django.conf import settings
 from .models import Client
 
-
 def get_clients(request):
     clients = Client.objects.all()
     return render(request, "dashboard/clients_details.html", {"clients": clients})
@@ -50,3 +49,4 @@ def read_file(file_path):
             available_disk_space_gb,
         ]
         return final_data
+
