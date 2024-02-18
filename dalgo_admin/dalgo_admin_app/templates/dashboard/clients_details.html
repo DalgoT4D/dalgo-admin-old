@@ -1,4 +1,7 @@
 {% extends '../base.html' %}
+
+<div class="container mt-5">
+
 {% block title %}Client Details{% endblock %}
 {% block content %}
     <div class="container">
@@ -34,4 +37,12 @@
         </table>
     </div>
     </div>
-{% endblock %}
+
+   
+    <script>
+        function redirectToClient(clientId) {
+            // Redirect to a dynamic route based on the client's id
+            window.location.href = '/client/' + clientId;
+        }
+    </script>
+{% endblock content %}

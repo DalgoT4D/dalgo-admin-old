@@ -7,6 +7,7 @@ from .models import Client
 
 root_dir = Path(settings.BASE_DIR).resolve().parent
 
+
 def get_clients(request):
     clients = Client.objects.all()
     return render(request, "dashboard/clients_details.html", {"clients": clients})
@@ -27,29 +28,31 @@ def infra_info(request):
         # fetching data from file
         file_path = settings.BASE_DIR / "data" / "mock.json"  # Input json file path
 
-        log_file_path = root_dir / "assets" / 'promtail_output.txt' #log file path
+        log_file_path = root_dir / "assets" / "promtail_output.txt"  # log file path
 
-        memory,RAM, cpu_usage = getLiveData(log_file_path)
-       
+        memory, RAM, cpu_usage = getLiveData(log_file_path)
+
         data = read_file(file_path)
-        data[-1],data[-2],data[-3] = memory,RAM,cpu_usage
+        data[-1], data[-2], data[-3] = memory, RAM, cpu_usage
         return render(request, "./infrastructure/infrastructure.html", {"data": data})
     else:
         data = "error"
         return render(request, "./infrastructure/infrastructure.html", {"data": data})
 
-def fetch_prometheus_metrics(requests,output_file):
+
+def fetch_prometheus_metrics(requests, output_file):
     url = settings.PROMETHEUS_ENDPOINT
     response = requests.get(url)
     if response.status_code == 200:
-        with open(output_file, 'w') as f:
+        with open(output_file, "w") as f:
             f.write(response.text)
         return True
     else:
         return False
 
+
 def Write_Monitoring_file():
-    output_file = root_dir / "assets" / 'promtail_output.txt'
+    output_file = root_dir / "assets" / "promtail_output.txt"
 
     if fetch_prometheus_metrics(output_file):
         print(f"Metrics fetched successfully and saved to {output_file}")
@@ -80,55 +83,54 @@ def read_file(file_path):
 
 def getLiveData(log_file_path):
 
-    with open(log_file_path, 'r') as file:
+    with open(log_file_path, "r") as file:
         lines = file.readlines()
 
         metrics = []
-        Active_bytes,MemTotal_bytes=[],[]
-        filesystem_avail_bytes,filesystem_size_bytes=[],[]
+        Active_bytes, MemTotal_bytes = [], []
+        filesystem_avail_bytes, filesystem_size_bytes = [], []
 
         for line in reversed(lines):
 
             #  calculation for cpu usages
 
-            if line.startswith('node_cpu_seconds_total'):
+            if line.startswith("node_cpu_seconds_total"):
                 parts = line.split()
                 time_value = parts[-1]
                 mode = parts[-2].split(',mode="')[-1].split('"')[0]
                 cpu = parts[-2].split('cpu="')[-1].split('"')[0]
-                
-                if mode != 'idle':
-                    metrics.append({"cpu": cpu, "mode": mode, "time" : float(time_value)})
 
-            # calculation of the ram usages 
-            if line.startswith('node_memory_Active_bytes'):
+                if mode != "idle":
+                    metrics.append(
+                        {"cpu": cpu, "mode": mode, "time": float(time_value)}
+                    )
+
+            # calculation of the ram usages
+            if line.startswith("node_memory_Active_bytes"):
                 Active_bytes.append(line.split()[-1])
 
-            if line.startswith('node_memory_MemTotal_bytes'):
-                MemTotal_bytes.append(line.split()[-1])       
+            if line.startswith("node_memory_MemTotal_bytes"):
+                MemTotal_bytes.append(line.split()[-1])
 
-
-            # calculation of free disk 
-            if line.startswith('node_filesystem_avail_bytes'):
-                device = line.split()[-2].split("device=")[-1].split(',')[0] 
-                if 'root' in device:
+            # calculation of free disk
+            if line.startswith("node_filesystem_avail_bytes"):
+                device = line.split()[-2].split("device=")[-1].split(",")[0]
+                if "root" in device:
                     filesystem_avail_bytes.append(line.split()[-1])
-                
 
-            if line.startswith('node_filesystem_size_bytes'):
-                device = line.split()[-2].split("device=")[-1].split(',')[0]
-                if 'root' in device:
+            if line.startswith("node_filesystem_size_bytes"):
+                device = line.split()[-2].split("device=")[-1].split(",")[0]
+                if "root" in device:
                     filesystem_size_bytes.append(line.split()[-1])
-
 
         cpu_times = {}
         total_time = 0.0
 
         # Sum the times for each mode and CPU
         for metric in metrics:
-            cpu = metric['cpu']
-            mode = metric['mode']
-            time = metric['time']
+            cpu = metric["cpu"]
+            mode = metric["mode"]
+            time = metric["time"]
 
             if cpu not in cpu_times:
                 cpu_times[cpu] = {}
@@ -149,18 +151,18 @@ def getLiveData(log_file_path):
         total_cpu_usage = sum(cpu_usage_rates.values())
         avg_cpu_usage_rate = total_cpu_usage / total_cpu_count
 
-
         # further calculation
-        disk_Usage = round(float(filesystem_avail_bytes[0])/(1024*1024*1024),2)
-        Memory_Usage = round(float(Active_bytes[0])/(1024*1024*1024),2)
+        disk_Usage = round(float(filesystem_avail_bytes[0]) / (1024 * 1024 * 1024), 2)
+        Memory_Usage = round(float(Active_bytes[0]) / (1024 * 1024 * 1024), 2)
 
-        Total_disk_space = round(float(filesystem_size_bytes[0])/(1024*1024*1024),2)
-        Total_Memory = round(float(MemTotal_bytes[0])/(1024*1024*1024),2)
+        Total_disk_space = round(
+            float(filesystem_size_bytes[0]) / (1024 * 1024 * 1024), 2
+        )
+        Total_Memory = round(float(MemTotal_bytes[0]) / (1024 * 1024 * 1024), 2)
 
-        available_disk_space = round(Total_disk_space-disk_Usage,2)
-        available_RAM = round(Total_Memory-Memory_Usage,2)
+        available_disk_space = round(Total_disk_space - disk_Usage, 2)
+        available_RAM = round(Total_Memory - Memory_Usage, 2)
 
-        # Memory ,disk, cpu 
-        data = [available_disk_space,available_RAM,avg_cpu_usage_rate]
-        return data    
-    
+        # Memory ,disk, cpu
+        data = [available_disk_space, available_RAM, avg_cpu_usage_rate]
+        return data

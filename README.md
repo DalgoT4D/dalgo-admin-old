@@ -78,10 +78,10 @@ python manage.py migrate
 ```bash
 python manage.py shell -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
 ```
-4. run the server
+5. run the server
 ```bash
 py manage.py runserver
 ```
-5. Paste the given url on browser and see the app running
+6. Paste the given url on browser and see the app running
 
 ### Cheers!! Now you are done with the Setup!!
