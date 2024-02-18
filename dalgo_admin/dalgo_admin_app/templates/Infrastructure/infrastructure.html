@@ -18,7 +18,7 @@
                   <h4 class="card-title">Airbyte</h4>
                   <img class="logo airbyte-logo" src="{% static '..\static\airbyte-logo.png' %}" alt="Logo">
                 </div>
-                <p>Current version: {{data.0}}</p>
+                <p>Current version: {{data.airbyte_version}}</p>
               </div>
             </div>
           </div>
@@ -29,7 +29,7 @@
                   <h4 class="card-title">Prefect</h4>
                   <img class="logo prefect-logo" src="{% static '..\static\prefect-logo.png' %}" alt="Logo">
                 </div>
-                <p>Current version: {{data.1}}</p>
+                <p>Current version: {{data.perfect_version}}</p>
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@
                   <h4 class="card-title">DBT</h4>
                   <img class="logo dbt-logo" src="{% static '..\static\dbt-logo.png' %}" alt="Logo">
                 </div>
-                <p>Current version: {{data.2}}</p>
+                <p>Current version: {{data.dbt_version}}</p>
               </div>
             </div>
           </div>
@@ -51,9 +51,9 @@
                   <h5 class="card-title">Machine Metrics</h5>
                   <img class="logo metric-logo" src="{% static '..\static\metric-logo.png' %}" alt="Logo">
                 </div>
-                <p class="card-text">CPU usage: {{data.3}}%</p>
-                <p class="card-text">Available RAM: {{data.4}}GB</p>
-                <p class="card-text">Available Disk Space: {{data.5}}GB</p>
+                <p class="card-text">CPU usage: {{data.cpu_usage_percent}}%</p>
+                <p class="card-text">Available RAM: {{data.available_ram_gb}}GB</p>
+                <p class="card-text">Available Disk Space: {{ data.available_disk_space_gb }}GB</p>
               </div>
             </div>
           </div>

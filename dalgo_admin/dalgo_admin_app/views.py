@@ -30,10 +30,10 @@ def infra_info(request):
 
         log_file_path = root_dir / "assets" / "promtail_output.txt"  # log file path
 
-        memory, RAM, cpu_usage = getLiveData(log_file_path)
+        memory, RAM, cpu_usage = get_live_data(log_file_path)
 
         data = read_file(file_path)
-        data[-1], data[-2], data[-3] = memory, RAM, cpu_usage
+        data["available_disk_space_gb"], data["available_ram_gb"], data["cpu_usage_percent"] = memory, RAM, cpu_usage
         return render(request, "./infrastructure/infrastructure.html", {"data": data})
     else:
         data = "error"
@@ -51,7 +51,7 @@ def fetch_prometheus_metrics(requests, output_file):
         return False
 
 
-def Write_Monitoring_file():
+def write_monitoring_file():
     output_file = root_dir / "assets" / "promtail_output.txt"
 
     if fetch_prometheus_metrics(output_file):
@@ -70,18 +70,20 @@ def read_file(file_path):
         cpu_usage_percent = data["Machine_metrics"]["CPU_usage_percent"]
         available_ram_gb = data["Machine_metrics"]["available_RAM_GB"]
         available_disk_space_gb = data["Machine_metrics"]["available_disk_space_GB"]
-        final_data = [
-            airbyte_version,
-            prefect_version,
-            dbt_version,
-            cpu_usage_percent,
-            available_ram_gb,
-            available_disk_space_gb,
-        ]
+
+        final_data = {
+            "airbyte_version": airbyte_version,
+            "perfect_version": prefect_version,
+            "dbt_version": dbt_version,
+            "cpu_usage_percent": cpu_usage_percent,
+            "available_ram_gb":available_ram_gb,
+            "available_disk_space_gb": available_disk_space_gb
+        }
+
         return final_data
 
 
-def getLiveData(log_file_path):
+def get_live_data(log_file_path):
 
     with open(log_file_path, "r") as file:
         lines = file.readlines()
