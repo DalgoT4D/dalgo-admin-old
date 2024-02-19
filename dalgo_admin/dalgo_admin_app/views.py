@@ -4,6 +4,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf import settings
 from .models import Client
+from datetime import datetime
+import os
+import glob
 
 root_dir = Path(settings.BASE_DIR).resolve().parent
 
@@ -28,10 +31,10 @@ def infra_info(request):
         # fetching data from file
         file_path = settings.BASE_DIR / "data" / "mock.json"  # Input json file path
 
-        log_file_path = root_dir / "assets" / "promtail_output.txt"  # log file path
+        log_file_path = fetch_latest_file() or  root_dir / "assets" / "promtail_output.txt"  # log file path
 
         memory, RAM, cpu_usage = get_live_data(log_file_path)
-
+        
         data = read_file(file_path)
         data["available_disk_space_gb"], data["available_ram_gb"], data["cpu_usage_percent"] = memory, RAM, cpu_usage
         return render(request, "./infrastructure/infrastructure.html", {"data": data})
@@ -52,13 +55,23 @@ def fetch_prometheus_metrics(requests, output_file):
 
 
 def write_monitoring_file():
-    output_file = root_dir / "assets" / "promtail_output.txt"
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    output_file = root_dir / "downloads" / "promtail_output_{timestamp}.txt"
 
     if fetch_prometheus_metrics(output_file):
         print(f"Metrics fetched successfully and saved to {output_file}")
     else:
         print("Failed to fetch metrics")
 
+
+def fetch_latest_file():
+    files = glob.glob(str(root_dir / "downloads" / "promtail_output_*.txt"))
+    latest_file = max(files,key= os.path.getctime)
+
+    for file in files:
+        if file != latest_file:
+            os.remove(file)
+    return latest_file        
 
 # function to read the file content
 def read_file(file_path):
