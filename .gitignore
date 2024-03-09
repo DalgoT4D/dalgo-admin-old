@@ -6,3 +6,4 @@ Pipfile
 Pipfile.lock
 **/migrations/*.pyc
 venv/
+downloads/
